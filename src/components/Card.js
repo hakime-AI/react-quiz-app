@@ -13,8 +13,8 @@ const Card = ({ question, questionId,handleResponse,correctAnswer,incorrectAnswe
                 <h2>{question.question}</h2>
                 {responces.map((answer, index) =>
                     <div key={questionId + index}>
-                        <input type="radio" id={questionId + index} name={questionId} onChange={()=>handleResponse(answer,correctAnswer)}/>
-                        <label htmlFor={questionId + index}>{answer}</label>
+                        <button class='button' type="radio" id={questionId + index} name={questionId} onClick={()=>handleResponse(answer,correctAnswer)}>{answer}</button>
+                        {/* <label htmlFor={questionId + index}>{answer}</label> */}
                     </div>)}
             </div>
         </div>
